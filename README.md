@@ -5,6 +5,8 @@
 ###集成bpmn-js 
 ### 创建数据库  activiti 表会自动创建
 ### 定义了一些常用API 
+### 默认首页 http://localhost:20021/ bpmn-js 界面
+### http://localhost:20021/swagger-ui.html swagger-ui地址
 
 
 
