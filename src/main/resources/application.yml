@@ -1,0 +1,27 @@
+server:
+  port: 20021
+
+spring:
+  application:
+    name: activiti7-workflow-instance
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/activiti?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123123
+  activiti:
+    #表示启动时检查数据库表，不存在则创建
+    database-schema-update: true
+    #表示哪种情况下使用历史表，这里配置为full表示全部记录历史，方便绘制流程图
+    history-level: full
+    #true表示使用历史表，如果不配置，则工程启动后可以检查数据库，只建立了17张表
+    db-history-used: true
+    async-executor-activate: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+logging:
+  level:
+    root: INFO
